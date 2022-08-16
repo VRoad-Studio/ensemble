@@ -27,15 +27,23 @@ import "bootstrap";
 
 import { initFlatpickr } from "../plugins/flatpickr";
 import { displayQuote } from "../plugins/quote.js";
+// import { scrollFunction } from "./back_to_top";
+// JS 4 back to top BTN
+
+import "./back_to_top";
+
+// import { scrollFunction } from "./back_to_top";
+
 
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
+
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
-  displayQuote();
+  // displayQuote();
   initFlatpickr();
 
 });
@@ -43,6 +51,8 @@ document.addEventListener('turbolinks:load', () => {
 require("trix")
 require("@rails/actiontext")
 require("@rails/ujs").start();
+
+
 
 import "controllers"
 import "../plugins/quote"

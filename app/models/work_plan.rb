@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class WorkPlan < ApplicationRecord
   belongs_to :user
   belongs_to :student, optional: true
@@ -11,5 +13,7 @@ class WorkPlan < ApplicationRecord
   validates :name, presence: true
   validates :grade, presence: true
 
-
+  def all_domains_from_work_plan
+    WorkPlanDomain::DOMAINS.select { |d| d[:grade] == grade }.first[:domains]
+  end
 end

@@ -38,6 +38,15 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'rails-i18n'
+# gem "bootstrap", "~> 5.0.2"
+
+# add a form_for with bbotstrap
+# gem "bootstrap_form", "~> 5.1"
+
+
+
+# reduce log size with lograge
+gem "lograge"
 
 # admin
 gem 'rails_admin', ['>= 3.0.0.rc2', '< 4']
@@ -61,7 +70,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'dotenv-rails'
   # autoindent erb file
-  gem 'htmlbeautifier'
+
+
 
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -75,6 +85,8 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'htmlbeautifier'
+  gem "rubocop-rails", require: false
 end
 
 group :test do
@@ -90,4 +102,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # add cloudinary
 gem 'cloudinary', '~> 1.16.0'
-

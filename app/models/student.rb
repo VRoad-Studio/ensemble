@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Student < ApplicationRecord
   belongs_to :classroom
 
@@ -9,5 +11,13 @@ class Student < ApplicationRecord
 
   has_many :work_plan_domains, dependent: :destroy
 
+  has_many :belts, dependent: :destroy
+
   validates :first_name, presence: true
+
+  def all_domains_from_student
+    WorkPlanDomain::DOMAINS.select { |d| d[:grade] == classroom.grade }.first[:domains]
+  end
+
+  
 end

@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class ClassroomsController < ApplicationController
   def index
-    @classrooms = Classroom.where(user_id: current_user)
+    @classrooms = current_user.classrooms
     @students_list = []
     @classrooms.each do |classroom|
-      @students_list << [classroom, classroom.student_list]
+      @students_list << [classroom, classroom.students]
     end
   end
 

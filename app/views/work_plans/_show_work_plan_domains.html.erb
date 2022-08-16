@@ -1,6 +1,6 @@
 <%# work_plan.work_plan_domains.each do |work_plan_domain|%>
   <%# <%raise%>
-  <%WorkPlanDomain::DOMAINS.each do |work_plan_domains|%>
+  <%@domains.each do |work_plan_domains|%>
     <% wpd2 = work_plan.work_plan_domains.where(domain: "#{work_plan_domains}")%>
     <% unless wpd2.empty? %>
       <%wpd2.order(:level).each do |work_plan_domain|%>
@@ -14,5 +14,5 @@
   <%# add domain%>
   <a id="bottom"></a>
   <div >
-    <%= render 'add_domain', work_plan: work_plan%>
+    <%= render 'show_add_domain', work_plan: work_plan%>
   </div>

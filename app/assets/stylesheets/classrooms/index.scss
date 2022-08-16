@@ -5,6 +5,7 @@
 .students-names{
    display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 10px 0 10px;
 }
 .classroom-card {
   min-height: 200px;
@@ -30,11 +31,13 @@
   width: 290px;
   h1 {
   font-size: 20px !important;
+  color: $grisF;
   }
+
 }
 
 .add-student-btn{
-  margin-bottom: 15px;
+  margin: 15px 0 15px 10px;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -78,6 +81,13 @@
   margin-right: 20px;
 }
 
-.classroom-field{
+.classroom-form{
+  margin-bottom: 20px;
+}
+
+.classroom-creation{
   margin: 15px 0 15px 0;
+  button{
+    margin-bottom: 15px;
+  }
 }
